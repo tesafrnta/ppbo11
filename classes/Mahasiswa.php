@@ -22,7 +22,7 @@ class Mahasiswa {
     }
 
     public function readAll() {
-        $query = "SELECT * FROM " . $this->table_name . " ORDER BY id DESC";
+        $query = "SELECT * FROM " . $this->table_name . " ORDER BY id ASC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
